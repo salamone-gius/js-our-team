@@ -11,7 +11,7 @@
 
 
 // 1. Aggiungere un file js in cui definire un array di oggetti che rappresentano i membri del team. Ogni membro ha le informazioni necessarie per stampare la relativa card: Nome, Ruolo e Foto:
-// - creo un array di oggetti che rappresentano i membri del team;
+// - creo un array di oggetti che rappresentano i membri del team.
 const members = [
     {
         "name": "Wayne Barnett",
@@ -47,3 +47,29 @@ const members = [
 
 console.log(members);
 
+// 2. Una volta definita la struttura dati, prendendo come riferimento la card di esempio presente nell'html, stampare dinamicamente una card per ogni membro del team.
+// - aggancio l'elemento HTML su cui andrò a stampare le card;
+const teamContainer = document.querySelector(".team-container");
+// - scorrendo tutto l'array members con ciclo definito...
+for (let i = 0; i < members.length; i++) {
+    // - aggiungo dinamicamente ogni elemento (card) dell'array members all'HTML;
+    teamContainer.innerHTML += 
+    // - importo TUTTA la struttura HTML della team-card;
+    // - al posto di foto, nome e ruolo, inserisco il VALORE della relativa CHIAVE richiamandolo dall'array members con template literal
+
+        `
+        <div class="team-card">
+            <div class="card-image">
+                <img
+                    src="${members[i].pic}"
+                    alt="${members[i].name}"
+                />
+            </div>
+            <div class="card-text">
+                <h3>${members[i].name}</h3>
+                <p>${members[i].role}</p>
+            </div>
+        </div>
+        `
+    ;
+}

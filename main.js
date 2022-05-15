@@ -8,3 +8,42 @@
 // Scriviamo prima la logica in italiano e poi traduciamo in codice.
 // console.log() è nostro amico.
 // Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzioni più piccole.
+
+
+// 1. Aggiungere un file js in cui definire un array di oggetti che rappresentano i membri del team. Ogni membro ha le informazioni necessarie per stampare la relativa card: Nome, Ruolo e Foto:
+// - creo un array di oggetti che rappresentano i membri del team;
+const members = [
+    {
+        "name": "Wayne Barnett",
+        "role": "Founder & CEO",
+        "pic": "img/wayne-barnett-founder-ceo.jpg",
+    },
+    {
+        "name": "Angela Carroll",
+        "role": "Chief Editor",
+        "pic": "img/angela-caroll-chief-editor.jpg",
+    },
+    {
+        "name": "Angela Lopez",
+        "role": "Social Media Manager",
+        "pic": "img/angela-lopez-social-media-manager.jpg",
+    },
+    {
+        "name": "Barbara Ramos",
+        "role": "Graphic Designer",
+        "pic": "img/barbara-ramos-graphic-designer.jpg",
+    },
+    {
+        "name": "Scott Estrada",
+        "role": "Developer",
+        "pic": "img/scott-estrada-developer.jpg",
+    },
+    {
+        "name": "Walter Gordon",
+        "role": "Office Manager",
+        "pic": "img/walter-gordon-office-manager.jpg",
+    },
+];
+
+console.log(members);
+
